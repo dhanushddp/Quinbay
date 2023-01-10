@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script src="/Users/dhanushpraveen/Desktop/Task/details.js"></script>
+    <link rel="stylesheet" href="/Users/dhanushpraveen/Desktop/Task/contac.css">
+    <a href="/Users/dhanushpraveen/Desktop/Task/Home.html"><img src="/Users/dhanushpraveen/Desktop/Task/1553932470-bnari clg copy.jpg"></a>
+</head>
+<body>
+    <h1 style="text-align:  center;">CONTACTS</h1>
+    <table id="contacts">
+        <tr>
+            <td><pre><h2>Location</h2><br>Sathy - Bhavani State Highway, Alathukombai - Post,
+                Sathyamangalam - 638 401, Erode District, Tamil Nadu, India 
+                Mobile No. : +91 99429 21289
+                </pre></td>
+                <td><pre><h2>Phone</h2><br>Phone No. : +91 4295 226000 
+                    Mobile No. : +91 99429 21289 
+                    Fax No. : +91 4295 226666
+                    </pre></td>
+        </tr>
+        <tr>
+            <td><pre><h2>Email</h2><br>stayahead@bitsathy.ac.in
+                </pre></td> 
+                <td><pre><h2>Admission</h2><br>admissions[at]bitsathy.ac.in 
+                    +91 89401 26000
+                </pre></td> 
+            
+        </tr>
+    </table>
+    <div id="query">
+        <h2>Queries</h2>
+        <form id="details">
+            <label>Name<br></label>
+            <input type="text" id="name">
+            <br>
+            <label>City<br></label>
+            <input type="text" id="city">
+            <br>
+            <label>Contact details<br></label>
+            <input type="text" id="contact">
+            <br>
+            <label>Query<br></label>
+            <textarea id="feedback" placeholder="Type your queries here!"></textarea>
+            <br>
+            <button type="button" id="submit">Submit</button>
+        </form>
+
+    </div>
+    <pre id="content"></pre>
+    <div style="visibility: hidden;;" id="show">
+    <h2>Here is what we received!!!!</h2>
+    <table style = "border: 3px solid black;">
+        <tr style="border: 2px;">
+            <td>
+                <p id="Namer"></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="cityr">
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="phone">
+
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="mssg"></p>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
