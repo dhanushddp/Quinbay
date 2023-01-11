@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <script>
+        function additem(event) {
+            event.preventDefault();
+            if (confirm('Do you want to add item?')) {
+                document.getElementById("out").textContent = "Item added Successfully!!!!";
+            } else {
+                document.getElementById("out").textContent = "Oops!! item not added";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        input {
+            height: 20px;
+            border: 1px solid black;
+        }
+
+        .checked {
+            color: orange;
+        }
+
+        #header {
+
+            border: 2px solid rgb(36, 175, 231);
+            position: sticky;
+            top: 0;
+            background-color: rgb(22, 155, 208);
+            margin: -10px -10px -10px -10px;
+        }
+
+        #logo {
+            position: relative;
+            left: 150px;
+        }
+
+        #search {
+            position: relative;
+            left: 200px;
+            bottom: 55px;
+            border-radius: 10px;
+            height: 30px;
+
+        }
+
+        #search_button {
+            position: relative;
+            left: 210px;
+            bottom: 47px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 3px 3px 3px 3px;
+            font-size: 22px;
+
+
+
+        }
+
+        #add_to_cart {
+            background-color: orange;
+            padding: 10px 10px 10px 10px;
+            font-size: 14px;
+        }
+
+        a:hover {
+            background-color: black;
+        }
+
+        #navigation {
+            position: relative;
+            /* left:1200px; */
+            text-align: right;
+            /* bottom: 84px; */
+            padding-left: 1px;
+        }
+
+        /* #purchase{
+            position:relative;
+            border:1px solid black;
+            top: 20px; 
+            width:75%;
+            height:700px;
+
+        }
+        #addMobile{
+            position:relative;
+            border:1px solid black;
+            bottom:1682px; 
+            left:1080px;
+            width:25%;
+            height:700px;
+        } */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            background-color: #2196F3;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* #item1-image{
+            position: relative;
+        }
+        #item1{
+            position: relative;
+
+        } */
+
+        #addPhones {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <img id="logo" src="/Blibli.png" width="20%" height="120">
+        <input size=80 type="text" name="products" id="search">
+        <button type="submit" id="search_button"><img src="search.png" width="25px"></button>
+        <nav id="navigation">
+            <a href="/Home.html">LOGIN</a>&nbsp;&nbsp;&nbsp;
+            <a id="signup" href="/Home.html">SIGN UP</a>
+        </nav>
+    </div>
+    <br>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="1.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Apple iPhone 13 (128GB 8GB) -Starlight</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;60,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="2.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Samsung J15 Wave(128GB 8GB) - Green</p>
+
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;30,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="3.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Vivo V13 (128GB 8GB) -Starlight white</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;44,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="4.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Redmi 9 Pro (128GB 4GB) - Authentic silver</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;20,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div style="grid-row:1/5;background-color: aliceblue;" class="grid-item">
+            <div id="headimage">
+                <img src="5.png" width="90%">
+            </div>
+            <div id="addPhones">
+                <label for="name">Brand Name :</label><br>
+                <input type="text" id="name" name="name" size="32px"><br><br>
+                <label for="model">Model Name :</label>
+                <input type="text" id="model" name="model" size="32px"><br><br>
+
+                <label for="Ram">RAM :</label><br>
+                <select name="ram" id="ram" width="20px">
+                    <option value="4">4GB</option>
+                    <option value="8">8GB</option>
+                    <option value="12">12GB</option>
+                    <option value="16">16GB</option>
+
+                </select><br><br>
+                <label for="Mem">Memory :</label><br>
+                <select name="mem" id="memory" width="20px">
+                    <option value="32">32GB</option>
+                    <option value="64">64GB</option>
+                    <option value="128">128GB</option>
+                    <option value="256">256GB</option>
+
+                </select><br><br>
+
+                <label for="price">Price :</label><br>
+                <input type="number" id="price" name="actual_price" size="32px"><br><br>
+
+
+                <button onclick="additem(event)" style="background-color: orange;padding: 10px 10px 10px 10px;"
+                    type="submit" id="additem">Add Mobile Here!!!</button>
+                <br>
+                <h2 id="out"></h2>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="4.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Redmi 8 Pro (128GB 4GB) - Authentic silver</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;17,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="2.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Samsung J14 Wave(64GB 8GB) - Navy Red</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;33,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="3.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Vivo Y15 (128GB 8GB) -Metallic white</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;15,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="1.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Apple iPhone 12 (128GB 8GB) - Black</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>&nbsp;4.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;50,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="2.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Samsung Galaxy Note(128GB 8GB) - White</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;56,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="1.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Apple iPhone 11 (128GB 8GB) -Navy Blue</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;45,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="4.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Redmi Note 8 (128GB 8GB) - Authentic silver</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;40,999</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div id="item1-image">
+                <img src="3.jpg" width="275" height="375">
+            </div>
+            <div id="item1">
+                <p style="font-size:20px;text-align: left;">Vivo V20 (128GB 8GB) -Metallic Wine</p>
+                <p style="text-align: left;">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>&nbsp;3.0
+                </p>
+                <p style="text-align:left;font-size: 24px;">
+                    <small>Price&nbsp;:&nbsp;</small><b><sup>&#8377;</sup>&nbsp;58,799</b>
+                </p>
+                <p style="text-align: left;">
+                    <button type="button" id="add_to_cart">Add To Cart</button>
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
