@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-com</title>
+    <script src="/iterate.js"></script>
+    <style>
+        #header {
+
+            position: sticky;
+            top: 0;
+            border: 2px rgba(0, 148, 217, 255);
+            margin: -10px -10px -10px -10px;
+            overflow: auto;
+            z-index: 10;
+
+            /* padding-bottom: -300px; */
+
+            background-color: rgba(0, 148, 217, 255);
+        }
+
+
+        #logo {
+            position: relative;
+            top: 20px;
+            left: 150px;
+        }
+
+
+
+        #navigation {
+            text-align: right;
+            padding-bottom: 10px;
+            padding-right: 10px;
+        }
+
+        #search {
+            position: relative;
+            left: 200px;
+            bottom: 30px;
+            border-radius: 10px;
+            height: 30px;
+
+        }
+
+        #search_button {
+            position: relative;
+            left: 210px;
+            bottom: 23px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 3px 3px 3px 3px;
+            font-size: 22px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1.5fr 6fr 2.5fr;
+            grid-auto-rows: max-content;
+            grid-gap: 1px;
+
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+
+        }
+
+        #addPhones {
+            text-align: left;
+            width: 90%;
+        }
+
+        a:hover {
+            background-color: black;
+        }
+
+        #items {
+            border: 2px solid black;
+        }
+
+        tr,
+        th {
+            border: 1px solid black;
+        }
+
+        tr:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="header">
+
+        <img id="logo" src="/Blibli.png" width="20%" height="90">
+        <input size="75" type="text" name="products" id="search">
+        <button type="button" id="search_button"><img src="search.png" width="25px"></button>
+        <nav id="navigation">
+            <a href="/Home.html">LOGIN</a>&nbsp;&nbsp;&nbsp;
+            <a id="signup" href="/Home.html">SIGN UP</a>
+
+        </nav>
+    </div>
+    <div class="grid-container">
+
+        <div class="grid-item">
+            <div id="headimage">
+                <img src="5.png" width="90%">
+            </div>
+            <div id="addPhones">
+                <label for="name">Brand Name :</label><br>
+                <input style="width: 50%" ;type="text" id="name" name="name" size="32px"><br><br>
+                <label for="model">Model Name :</label><br>
+                <input type="text" style="width: 50%" id="modelno" name="model" size="32px"><br><br>
+
+                <label for="Ram">RAM :</label><br>
+                <select name="ram" id="ram" width="20px">
+                    <option value="4">4GB</option>
+                    <option value="8">8GB</option>
+                    <option value="12">12GB</option>
+                    <option value="16">16GB</option>
+
+                </select><br><br>
+                <label for="Mem">Memory :</label><br>
+                <select name="mem" id="memory" width="20px">
+                    <option value="32">32GB</option>
+                    <option value="64">64GB</option>
+                    <option value="128">128GB</option>
+                    <option value="256">256GB</option>
+
+                </select><br><br>
+
+                <label for="price">Price :</label><br>
+                <input style="width: 50%" ; type="number" id="price" name="actual_price" size="32px"><br><br>
+
+
+                <button style="background-color: orange;padding: 10px 10px 10px 10px;" type="button" id="additem">Add
+                    Mobile
+                    Here!!!</button>
+                <br><br><br><br>
+            </div>
+
+
+            <div id="filter">
+                <h3>FILTER</h3>
+                <label style="border: 2px solid black;border-radius: 5px;color:blueviolet;">Price</label><br><br>
+                <input size="20px" type="number" placeholder="MIN" id="minsearch"><input type="number" placeholder="MAX"
+                    id="maxsearch"><br><br>
+                <label style="border: 2px solid black;border-radius: 5px;color:blueviolet;">Company</label><br><br>
+                <input type="checkbox" id="vivo" value="Vivo">VIVO<br>
+                <input type="checkbox" id="iphone" value="Iphone">IPHONE<br>
+                <input type="checkbox" id="poco" value="poco">POCO<br>
+
+                <input type="checkbox" id="oppo" value="oppo">OPPO<br>
+
+
+                <input type="checkbox" id="sams" value="Samsung">SAMSUNG<br>
+
+                <input type="checkbox" id="redmi" value="Redmi">REDMI<br><br>
+                <label style="border: 2px solid black;border-radius: 5px;color:blueviolet;">Memory</label><br><br>
+                <input type="checkbox" id="64g" value="64gb">64GB<br>
+                <input type="checkbox" id="128g" value="128gb">128GB<br>
+
+                <input type="checkbox" id="256g" value="256gb">256GB<br><br>
+
+                <label style="border: 2px solid black;border-radius: 5px;color:blueviolet;">RAM</label><br><br>
+                <input type="checkbox" id="4g" value="4gb">4GB<br>
+                <input type="checkbox" id="8g" value="8gb">8GB<br>
+
+                <input type="checkbox" id="16g" value="16gb">16GB<br>
+
+                <input type="checkbox" id="32g" value="32gb">32GB<br>
+
+
+            </div>
+        </div>
+        <div style="text-align: center;" class="grid-item">
+            <table id="items">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>RAM</th>
+                        <th>Memory</th>
+                        <th>Rating</th>
+                        <th>price</th>
+                        <th>Add to Cart</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="grid-item">
+            <table id="purchase">
+                <caption>Shopping Cart</caption>
+                <thead>
+                    <tr>
+
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>price</th>
+                        <th>Quantity</th>
+
+                    </tr>
+                </thead>
+            </table>
+            <button type="button" id="out1">Check out</button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
